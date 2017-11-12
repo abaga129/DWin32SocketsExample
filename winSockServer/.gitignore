@@ -1,0 +1,14 @@
+.dub
+docs.json
+__dummy.html
+docs/
+winsockserver.so
+winsockserver.dylib
+winsockserver.dll
+winsockserver.a
+winsockserver.lib
+winsockserver-test-*
+*.exe
+*.o
+*.obj
+*.lst
