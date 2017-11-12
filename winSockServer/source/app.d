@@ -10,7 +10,7 @@ static const(char*) DEFAULT_PORT = "27015";
 
 int main(string[] args)
 {
-	WSADATA wsaData;
+    WSADATA wsaData;
     int iResult;
 
     SOCKET ListenSocket = INVALID_SOCKET;

@@ -10,11 +10,11 @@ static const(char*) DEFAULT_PORT = "27015";
 
 void main(string[] args)
 {
-	WSADATA wsaData;
+    WSADATA wsaData;
     SOCKET ConnectSocket = INVALID_SOCKET;
-	addrinfo* result = null;
+    addrinfo* result = null;
     addrinfo* ptr = null;
-	addrinfo hints;
+    addrinfo hints;
     const(char)* sendbuf = "this is a test";
     char[DEFAULT_BUFLEN] recvbuf;
     int iResult;
@@ -33,13 +33,13 @@ void main(string[] args)
         return;
     }
 
-	memset(cast(void*)&hints, 0, hints.sizeof);
+    memset(cast(void*)&hints, 0, hints.sizeof);
     hints.ai_family = AF_UNSPEC;
     hints.ai_socktype = SOCK_STREAM;
     hints.ai_protocol = IPPROTO_TCP;
 
     // Resolve the server address and port
-	iResult = getaddrinfo("localhost", DEFAULT_PORT, &hints, &result);
+    iResult = getaddrinfo("localhost", DEFAULT_PORT, &hints, &result);
     if ( iResult != 0 ) {
         printf("getaddrinfo failed with error: %d\n", iResult);
         WSACleanup();
